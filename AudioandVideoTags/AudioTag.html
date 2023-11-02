@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <audio id="myAudio">
+        <source src="sea.ogg" type="audio/ogg">
+        <source src="sea.mp3" type="audio/mpeg">
+            your browser does not support audio files
+    </audio>
+
+    <p>Click the button to play or pause the audio.</p>
+
+    <button onclick="PlayAudio()" type="button">Play Audio</button>
+    <button onclick="PauseAudio()" type="button">Pause Audio</button>
+
+    <script>
+        var x=document.getElementById("myAudio");
+        function PlayAudio(){
+            x.play();
+        }
+        function PauseAudio(){
+            x.pause();
+        }
+    </script>
+</body>
+</html>

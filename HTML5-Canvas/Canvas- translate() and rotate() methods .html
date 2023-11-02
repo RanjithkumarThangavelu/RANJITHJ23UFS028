@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Matrix Transforms and translate() and rotate() methods</title>
+</head>
+
+<body>
+    <canvas id="DemoCanvas" width="300" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById("DemoCanvas");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.translate(160, 20);
+            ctx.rotate(45 * Math.PI / 180);
+            ctx.strokeStyle = "red";
+            ctx.strokeRect(60, 60, 160, 160);
+            ctx.stroke();
+        }
+    </script>
+</body>
+
+</html>

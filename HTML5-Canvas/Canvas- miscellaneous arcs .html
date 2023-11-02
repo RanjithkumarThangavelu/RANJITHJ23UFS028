@@ -1,0 +1,31 @@
+<head>
+    <title>Sample arcs example</title>
+    <script type="text/javascript">
+        function misc_curves() {
+            var canvas = document.getElementById("Mycanvas");
+            if (canvas.getContext) {
+                var context = canvas.getContext("2d");
+                for (var i = 0; i < 2; i++) {
+                    for (var j = 0; j < 3; j++) {
+                        context.beginPath();
+                        var x = 35 + j * 50;
+                        var y = 35 + i * 50;
+                        var radius = 20;
+                        var startAngle = 0;
+                        var endAngle = Math.PI + (Math.PI * j) / 2;
+                        var anticlockwise = i % 2 === 0 ? false : true;
+                        context.arc(x, y, radius, startAngle, endAngle,
+                        anticlockwise);
+                        context.stroke();
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="misc_curves();">
+    <canvas id="Mycanvas" width="340" height="340"> canvas</canvas>
+</body>
+
+</html>

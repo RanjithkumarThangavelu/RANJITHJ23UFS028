@@ -1,0 +1,37 @@
+<html>
+    <title>
+        Register an Employee Form
+    </title>
+    <body>
+        <h1>Employee Registration Form</h1>
+    </body>
+    <head>
+        
+        <script>
+            function displayRating(slider) {
+            document.getElementById("ratingValue").innerHTML = slider.value;}  
+            </script>
+            
+             <style type="text/css">
+                :required, :invalid { background-color: pink; }
+                :valid { background-color: white; }
+                </style>
+    </head>
+    <form  method="post" action="ThankYou.html">
+        <label for="fullName">Full Name:</label> <br>   
+        <input type="text" name="fullName" id="fullName" placeholder="Enter your full name" autofocus required />*<br/>
+        <label for="Email">Email</label><br>
+        <input type="text" name="Email" id="Email" placeholder="Enter the e=mail "required> *<br/>
+        <label for="dateofbirth"> Date Of Birth</label><br>
+        <input type="date" name="dateofbirth" placeholder="dateofbirth"required>* <br>
+        <label for="Age">Age:</label><br>
+        <input type="number" name="Age" id="Age" size="6" min="21" max="120" step="1" value="21">* <br>
+        <label for="Year of Experiance"> Year Of Experiance</label>* <br>
+        <input type="range" name="rating" id="rating" min="0" max="100" step="1" value="0"  oninput="output.value=rating.value">
+        <output name=output>0</output>  <br>
+        <label for="Phone number"> Phone</label>* <br>
+        <input type="text" name="Phone" id="Phone" part="[0-9]{2}-[0-9]{5}-[0-9]{5}" placeholder="xx-xxxxx-xxxxx  required"><br>
+        <input type="submit" value="Register"><br>
+        <p>Fields marked * are required</p><br>
+    </form>
+</html>

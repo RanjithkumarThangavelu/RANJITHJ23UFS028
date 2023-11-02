@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>HTML5 Canvas set global composite - copy</title>
+</head>
+
+<body>
+    <canvas id="MyCanvas" width="650" height="600"></canvas>
+    <script>
+        var canvas = document.getElementById("MyCanvas");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.rect(100, 20, 100, 100);
+            ctx.fillStyle = 'green';
+            ctx.fill();
+            ctx.globalCompositeOperation = 'xor';
+            ctx.beginPath();
+            ctx.arc(190, 120, 60, 0, 2 * Math.PI, false);
+            ctx.fillStyle = 'red';
+            ctx.fill();
+        }
+    </script>
+</body>
+
+</html>
